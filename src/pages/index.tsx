@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next';
+import Link from 'next/link';
 
 import { FiCalendar, FiUser } from 'react-icons/fi';
 import { getPrismicClient } from '../services/prismic';
@@ -29,65 +30,56 @@ export default function Home(): JSX.Element {
   return (
     <main>
       <div className={styles.posts}>
-        <a href="#null">
-          <h1>Como utilizar o Hooks</h1>
-          <p>Pensando em sincronização em vez de ciclos de vida.</p>
-          <div className={styles.postInfo}>
-            <div>
-              <FiCalendar />
-              15 Mar 2022
-            </div>
-            <div>
-              <FiUser />
-              Eleson Souza
+        <Link href="/post/teste">
+          <div className={styles.postItem}>
+            <h1>Como utilizar o Hooks</h1>
+            <p>Pensando em sincronização em vez de ciclos de vida.</p>
+            <div className={styles.postInfo}>
+              <div>
+                <FiCalendar />
+                15 Mar 2022
+              </div>
+              <div>
+                <FiUser />
+                Eleson Souza
+              </div>
             </div>
           </div>
-        </a>
+        </Link>
 
-        <a href="#null">
-          <h1>Como utilizar o Hooks</h1>
-          <p>Pensando em sincronização em vez de ciclos de vida.</p>
-          <div className={styles.postInfo}>
-            <div>
-              <FiCalendar />
-              15 Mar 2022
-            </div>
-            <div>
-              <FiUser />
-              Eleson Souza
+        <Link href="/">
+          <div className={styles.postItem}>
+            <h1>Como utilizar o Hooks</h1>
+            <p>Pensando em sincronização em vez de ciclos de vida.</p>
+            <div className={styles.postInfo}>
+              <div>
+                <FiCalendar />
+                15 Mar 2022
+              </div>
+              <div>
+                <FiUser />
+                Eleson Souza
+              </div>
             </div>
           </div>
-        </a>
+        </Link>
 
-        <a href="#null">
-          <h1>Como utilizar o Hooks</h1>
-          <p>Pensando em sincronização em vez de ciclos de vida.</p>
-          <div className={styles.postInfo}>
-            <div>
-              <FiCalendar />
-              15 Mar 2022
-            </div>
-            <div>
-              <FiUser />
-              Eleson Souza
-            </div>
-          </div>
-        </a>
-
-        <a href="#null">
-          <h1>Como utilizar o Hooks</h1>
-          <p>Pensando em sincronização em vez de ciclos de vida.</p>
-          <div className={styles.postInfo}>
-            <div>
-              <FiCalendar />
-              15 Mar 2022
-            </div>
-            <div>
-              <FiUser />
-              Eleson Souza
+        <Link href="/">
+          <div className={styles.postItem}>
+            <h1>Como utilizar o Hooks</h1>
+            <p>Pensando em sincronização em vez de ciclos de vida.</p>
+            <div className={styles.postInfo}>
+              <div>
+                <FiCalendar />
+                15 Mar 2022
+              </div>
+              <div>
+                <FiUser />
+                Eleson Souza
+              </div>
             </div>
           </div>
-        </a>
+        </Link>
 
         <button type="button">Carregar mais posts</button>
       </div>
